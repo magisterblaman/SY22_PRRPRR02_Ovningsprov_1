@@ -48,6 +48,8 @@ namespace SY22_PRRPRR02_Ovningsprov_1 {
 		}
 
 		public WaterGun(int inputSquirtSize) {
+			MaxWater = 50;
+			Water = 20;
 			SquirtSize = inputSquirtSize;
 		}
 
@@ -56,7 +58,7 @@ namespace SY22_PRRPRR02_Ovningsprov_1 {
 		}
 
 		public string Squirt() {
-			if (_water <= 0) {
+			if (Water <= 0) {
 				return "Out of Water";
 			} else {
 				return "Squirted a size " + SquirtSize;
